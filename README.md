@@ -1,5 +1,5 @@
 <h1 align="center">
-  <strong>CPE201A_FP_LOPEZ</strong>
+  <strong>CPE201A_FP_DIONLOPEZ</strong>
 </h1>
   
 <p align="center" style="font-size: 30px;">
