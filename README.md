@@ -2,7 +2,7 @@
   <strong>CPE201A_FP_LOPEZ</strong>
 </h1>
   
-<p align="center" style="font-size: 18px;">
+<p align="center" style="font-size: 30px;">
   A Compilation of the Activites, Quizzes, and Projects across all of my first year CpE courses.
   <br />
   <br />
