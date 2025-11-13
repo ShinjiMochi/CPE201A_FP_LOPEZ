@@ -1,0 +1,40 @@
+# Project: Project1
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o calendar.o misc.o menuGUI.o credentials.o
+LINKOBJ  = main.o calendar.o misc.o menuGUI.o credentials.o
+LIBS     = -L"E:/Dev-Cpp/TDM-GCC-64/lib" -L"E:/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -L"C:/Users/Shinji/Documents" -static-libgcc
+INCS     = -I"E:/Dev-Cpp/TDM-GCC-64/include" -I"E:/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"E:/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"E:/Dev-Cpp/TDM-GCC-64/include" -I"E:/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"E:/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"E:/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = Project1.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+DEL      = E:\Dev-Cpp\DevCpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+calendar.o: calendar.cpp
+	$(CPP) -c calendar.cpp -o calendar.o $(CXXFLAGS)
+
+misc.o: misc.cpp
+	$(CPP) -c misc.cpp -o misc.o $(CXXFLAGS)
+
+menuGUI.o: menuGUI.cpp
+	$(CPP) -c menuGUI.cpp -o menuGUI.o $(CXXFLAGS)
+
+credentials.o: credentials.cpp
+	$(CPP) -c credentials.cpp -o credentials.o $(CXXFLAGS)
